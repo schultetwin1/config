@@ -1,6 +1,5 @@
 " Matt Schulte's vimrc
 " Mostly taken from DougBlack's tutorial
-" Last Updated: 11/26/2015
 
 " COLORS
 colorscheme elflord             " adequate colorscheme for now
@@ -14,20 +13,24 @@ set expandtab                   " tabs are spaces
 set smartindent                 " smart indenting
 set backspace=indent,eol,start  " enable backspace in insert mode
 
-" UI Config
+" UI CONFIG
 set number                      " show line numbers
 set cursorline                  " highlight the current line
 filetype indent on              " load filetype-specific indent files
 set lazyredraw                  " redraw only when we need to
 set showmatch                   " highlights matching [{()}]
 
-" Searching
+" SEARCHING
 set incsearch                   " search as characters are entered
 set hlsearch                    " highlight search matches
 
-" Folding
+" FOLDING
 set foldenable                  " enable folding
 set foldlevelstart=10           " Open most folds by default unless very deep
 set foldnestmax=10              " 10 nested folds max
 nnoremap <space> za     
-set foldmethod=syntax           "Fold lines on syntax
+set foldmethod=syntax           " Fold lines on syntax
+
+" BACK UP FILES
+set nobackup                    " Don't make a backup before overwritting
+set nowritebackup               " Don't make backups while writing
