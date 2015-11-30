@@ -17,4 +17,6 @@ if (!(Test-Path $HOME\vimfiles\bundle\typescript-vim)) {
     git clone https://github.com/leafgarland/typescript-vim.git $HOME\vimfiles\bundle\typescript-vim
 }
 copy $PSScriptRoot\vimrc $HOME\_vimrc
+copy $PSScriptRoot\Microsoft.PowerShell_profile.ps1 $HOME\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
+. $PROFILE
 Write-Host "Done"
