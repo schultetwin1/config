@@ -34,3 +34,6 @@ set foldmethod=syntax           " Fold lines on syntax
 " BACK UP FILES
 set nobackup                    " Don't make a backup before overwritting
 set nowritebackup               " Don't make backups while writing
+
+" PATHOGEN
+execute pathogen#infect()
