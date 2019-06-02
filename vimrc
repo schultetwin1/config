@@ -19,6 +19,7 @@ set cursorline                  " highlight the current line
 filetype indent on              " load filetype-specific indent files
 set lazyredraw                  " redraw only when we need to
 set showmatch                   " highlights matching [{()}]
+set ruler                       " enable rules
 
 " SEARCHING
 set incsearch                   " search as characters are entered
@@ -35,5 +36,9 @@ set foldmethod=syntax           " Fold lines on syntax
 set nobackup                    " Don't make a backup before overwritting
 set nowritebackup               " Don't make backups while writing
 
-" PATHOGEN
-execute pathogen#infect()
+" turn on spell check for .txt files
+autocmd FileType text setlocal spell spelllang=en_us
+autocmd FileType text setlocal textwidth=120
+
+" Turn off expand tab in makefile
+autocmd FileType make setlocal noexpandtab
